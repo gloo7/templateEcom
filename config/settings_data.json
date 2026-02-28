@@ -67,7 +67,7 @@
     "search_show_vendor": false,
     "enable_dynamic_product_options": true,
     "swatch_options": "Color、颜色、顏色",
-    "chip_options": "尺码",
+    "chip_options": "尺码、尺碼",
     "cart_type": "flyout",
     "cart_quick_shop_enabled": true,
     "cart_quick_shop_show_quantity_input": false,
