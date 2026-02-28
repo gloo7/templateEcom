@@ -1,1 +1,795 @@
-/* Use this file to add custom css to the theme. */
+/* ========================================
+   Custom Styles for Mobile-First Fashion Theme
+   Inspired by Japanese fashion e-commerce sites
+   ======================================== */
+
+/* ========================================
+   1. BASE STYLES & VARIABLES
+   ======================================== */
+:root {
+  --color-primary: #1a1a1a;
+  --color-secondary: #666666;
+  --color-accent: #c41e3a;
+  --color-background: #ffffff;
+  --color-border: #e5e5e5;
+  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+/* ========================================
+   2. HEADER STYLES - Mobile Optimized
+   ======================================== */
+@media screen and (max-width: 767px) {
+  /* Header container */
+  .header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Header inner layout */
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    height: 56px;
+  }
+
+  /* Center logo */
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__logo img {
+    max-height: 32px;
+    width: auto;
+  }
+
+  /* Menu button - left side */
+  .header__menu-button {
+    padding: var(--spacing-sm);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .header__menu-button svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-primary);
+  }
+
+  /* Right side icons */
+  .header__icons {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .header__icon {
+    padding: var(--spacing-sm);
+    position: relative;
+  }
+
+  .header__icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--color-primary);
+  }
+
+  /* Cart badge */
+  .header__cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--color-accent);
+    color: white;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide desktop navigation on mobile */
+  .header__nav {
+    display: none;
+  }
+}
+
+/* ========================================
+   3. HERO SECTION - Full Width Mobile
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .image-hero,
+  .slideshow {
+    margin: 0;
+    padding: 0;
+  }
+
+  .image-hero__inner,
+  .slideshow__slide {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+    min-height: 500px;
+    max-height: 800px;
+  }
+
+  .image-hero__image,
+  .slideshow__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Hero content overlay */
+  .image-hero__content-container,
+  .slideshow__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    text-align: center;
+  }
+
+  .image-hero__heading,
+  .slideshow__title {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+  }
+
+  .image-hero__subheading,
+  .slideshow__subheading {
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* CTA Button */
+  .image-hero__link,
+  .slideshow__link {
+    display: inline-block;
+    padding: 14px 32px;
+    background: white;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ========================================
+   4. CATEGORY TABS - Mobile Horizontal Scroll
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .category-tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-tab {
+    flex-shrink: 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    color: var(--color-secondary);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .category-tab.active,
+  .category-tab:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+  }
+}
+
+/* ========================================
+   5. PRODUCT GRID - 2 Column Mobile
+   ======================================== */
+@media screen and (max-width: 767px) {
+  /* Product grid container - Override existing styles */
+  .featured-collection .carousel__slides,
+  .grid-display--has-products {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--spacing-sm) !important;
+    padding: var(--spacing-md) !important;
+  }
+
+  /* Remove carousel styles on mobile */
+  .featured-collection .carousel__slide {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  /* Product card */
+  .product-item {
+    position: relative;
+    background: white;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .product-item__image-wrapper {
+    position: relative;
+    padding-top: 133%; /* 3:4 aspect ratio for fashion */
+    overflow: hidden;
+    background: #f5f5f5;
+    margin-bottom: var(--spacing-sm) !important;
+  }
+
+  .product-item__image-wrapper img,
+  .product-item__image-wrapper .image__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .product-item:hover .product-item__image-wrapper img {
+    transform: scale(1.03);
+  }
+
+  /* Product info */
+  .product-item__details-wrapper {
+    padding: 0;
+  }
+
+  .product-item__details {
+    text-align: left;
+  }
+
+  .product-item__details a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--color-primary);
+    text-decoration: none;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Price styling */
+  .product-item__price {
+    margin-top: var(--spacing-xs);
+  }
+
+  .price-item--regular {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+
+  .price-item--sale {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+
+  .price-item--compare {
+    font-size: 12px;
+    color: var(--color-secondary);
+    text-decoration: line-through;
+    margin-left: var(--spacing-xs);
+  }
+
+  /* Sale badge */
+  .product-item__badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    background: var(--color-accent);
+    color: white;
+    font-size: 10px;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+  }
+
+  /* Quick add button */
+  .product-item__quick-shop-button {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: 36px;
+    height: 36px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+    padding: 0;
+  }
+
+  .product-item__quick-shop-button span {
+    display: none;
+  }
+
+  .product-item__quick-shop-button::before {
+    content: '+';
+    font-size: 20px;
+    line-height: 1;
+    color: var(--color-primary);
+  }
+
+  .product-item:hover .product-item__quick-shop-button {
+    opacity: 1;
+  }
+
+  /* Hide swatches on mobile */
+  .product-item__swatches-wrapper {
+    display: none;
+  }
+}
+
+/* ========================================
+   6. SECTION HEADERS
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .section {
+    padding: var(--spacing-lg) var(--spacing-md) !important;
+  }
+
+  .section-header,
+  .text-block {
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md) !important;
+    text-align: center !important;
+  }
+
+  .text-block__overline {
+    font-size: 11px;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .text-block__heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 1px;
+  }
+
+  .text-block__subheading {
+    font-size: 13px;
+    color: var(--color-secondary);
+  }
+
+  .text-block__link {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+/* ========================================
+   7. PROMOTION BANNER
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .promo-banner,
+  .utility-bar {
+    background: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .promo-banner a,
+  .utility-bar a {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+/* ========================================
+   8. FOOTER - Simplified Mobile
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .footer {
+    background: var(--color-primary);
+    color: white;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .footer__section {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer__title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer__link {
+    display: block;
+    padding: var(--spacing-xs) 0;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .footer__bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+  }
+}
+
+/* ========================================
+   9. MOBILE DRAWER MENU
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .drawer-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    max-width: 320px;
+    height: 100%;
+    background: white;
+    z-index: 1001;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .drawer-menu.open {
+    transform: translateX(0);
+  }
+
+  .drawer-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .drawer-menu__close {
+    background: none;
+    border: none;
+    padding: var(--spacing-sm);
+    cursor: pointer;
+  }
+
+  .drawer-menu__nav {
+    padding: var(--spacing-md) 0;
+  }
+
+  .drawer-menu__item {
+    display: block;
+    padding: var(--spacing-md);
+    color: var(--color-primary);
+    font-size: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
+
+/* ========================================
+   10. COLLECTION GRID - Mobile
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .collection-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+
+  .collection-list-grid__item {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+
+  .collection-list-grid__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .collection-list-grid__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-md);
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+/* ========================================
+   11. IMAGE WITH TEXT - Mobile
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .image-with-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-with-text__image-wrapper {
+    width: 100%;
+    aspect-ratio: 4/5;
+  }
+
+  .image-with-text__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-with-text__content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+  }
+
+  .image-with-text__heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .image-with-text__text {
+    font-size: 14px;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+/* ========================================
+   12. NEWSLETTER - Mobile
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .newsletter {
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+  }
+
+  .newsletter__heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .newsletter__subheading {
+    font-size: 14px;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .newsletter__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 100%;
+  }
+
+  .newsletter__input {
+    padding: 14px var(--spacing-md);
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+  }
+
+  .newsletter__button {
+    padding: 14px var(--spacing-md);
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+/* ========================================
+   13. UTILITY CLASSES
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .full-width {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ========================================
+   14. LOADING STATES
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+}
+
+/* ========================================
+   15. ANIMATIONS
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .fade-in {
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-up {
+    animation: slideUp 0.4s ease;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* ========================================
+   16. HIDE CAROUSEL NAVIGATION ON MOBILE
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .carousel__navigation,
+  .carousel__button,
+  .page-dots {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   17. RICH TEXT SECTION
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .rich-text {
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+  }
+
+  .rich-text__heading {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .rich-text__text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-secondary);
+  }
+}
+
+/* ========================================
+   18. MOSAIC GRID - Mobile
+   ======================================== */
+@media screen and (max-width: 767px) {
+  .mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+  }
+
+  .mosaic-grid__item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mosaic-grid__item--large {
+    grid-column: span 2;
+  }
+
+  .mosaic-grid__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
