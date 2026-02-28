@@ -59,11 +59,33 @@
 
         <div class="product-form__option-swatches-wrapper">
           {% for value in option.values %}
+            {% assign matched_variant = blank %}
+            {% case option.position %}
+              {% when 1 %}
+                {% assign matched_variant = product.variants | where: 'option1', value | first %}
+              {% when 2 %}
+                {% assign matched_variant = product.variants | where: 'option2', value | first %}
+              {% when 3 %}
+                {% assign matched_variant = product.variants | where: 'option3', value | first %}
+            {% endcase %}
+            {% assign swatch_image = blank %}
+            {% if matched_variant and matched_variant.featured_media %}
+              {% assign swatch_image = matched_variant.featured_media.preview_image %}
+            {% elsif matched_variant and matched_variant.image %}
+              {% assign swatch_image = matched_variant.image %}
+            {% endif %}
             <button
               type="button"
               data-button="{{ value | handleize }}--{{ forloop.index0 }}"
               class="product-form__color-swatch {% if option.selected_value == value %}selected{% endif %}"
-              style="background-image: url({{ value | handle | append: '.' | append: file_extension | file_url }}); background-color: {{ value | handle }};"
+              style="
+                {% if swatch_image %}
+                  background-image: url({{ swatch_image | image_url: width: 96, height: 96, crop: 'center' }});
+                {% else %}
+                  background-image: url({{ value | handle | append: '.' | append: file_extension | file_url }});
+                {% endif %}
+                background-color: {{ value | handle }};
+              "
               tabindex="0"
               aria-label="{{ value }}"
               {% if dynamic_options %}
