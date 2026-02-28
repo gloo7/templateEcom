@@ -45,6 +45,7 @@
     "logo_uppercase": false,
     "font_logo_size": 30,
     "font_navigation_uppercase": false,
+    "font_navigation_weight": "normal",
     "font_navigation_size": 13,
     "font_navigation_letter_spacing": 0.1,
     "font_button_size": 14,

@@ -52,20 +52,21 @@
     "header": {
       "type": "header",
       "blocks": {
-        "mega_nav": {
+        "mega_nav_rHkBwq": {
           "type": "mega_nav",
           "settings": {
             "dropdown_parent_link": "",
             "featured_image_heading": "",
             "featured_image_link_text": "",
             "featured_image_link": "",
-            "feature_text": ""
+            "feature_text": "<p>Mention a new sale, product line, or blog post here. <a href=\"#\">Don't forget to add a link →</a></p>"
           }
         }
       },
       "block_order": [
-        "mega_nav"
+        "mega_nav_rHkBwq"
       ],
+      "custom_css": [],
       "settings": {
         "header_style": "default",
         "nav_position": "inline_left",
