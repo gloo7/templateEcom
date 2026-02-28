@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {}
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "collection": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "aspect_ratio": "natural",
+        "text_position": "center",
+        "overline": "A little lost?",
+        "title": "Here's a start",
+        "subheading": "<p>Add a subheading to provide more details about this collection.</p>",
+        "link_text": "Shop Bestsellers",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": ["main", "featured-collection"]
+}

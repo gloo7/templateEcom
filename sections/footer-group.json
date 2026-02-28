@@ -1,0 +1,71 @@
+{
+  "type": "footer",
+  "name": "t:groups.footer_group.name",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "desktop_width": 30,
+            "desktop_padding": 0,
+            "collapse_on_mobile": false,
+            "title": "",
+            "show_title_on_desktop": false,
+            "text": "<p>All product content for the theme demo was kindly provided by <a href=\"https://www.bul.com.au/\" title=\"https://www.bul.com.au/\">Bul</a></p>",
+            "image_max_width": 200,
+            "image_placement": "above_text",
+            "enable_follow_on_shop": true
+          }
+        },
+        "spacer": {
+          "type": "spacer",
+          "settings": {
+            "desktop_width": 10
+          }
+        },
+        "links-1": {
+          "type": "links",
+          "settings": {
+            "desktop_width": 15,
+            "desktop_padding": 4,
+            "collapse_on_mobile": true,
+            "title": "Links",
+            "show_title_on_desktop": true,
+            "link_list": "footer"
+          }
+        },
+        "links-0": {
+          "type": "links",
+          "settings": {
+            "desktop_width": 15,
+            "desktop_padding": 4,
+            "collapse_on_mobile": true,
+            "title": "Company",
+            "show_title_on_desktop": true,
+            "link_list": "footer"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "desktop_width": 30,
+            "desktop_padding": 0,
+            "collapse_on_mobile": false,
+            "title": "Newsletter",
+            "show_title_on_desktop": true,
+            "text": "<p>Subscribe for store updates and discounts.</p>"
+          }
+        }
+      },
+      "block_order": ["text", "spacer", "links-1", "links-0", "newsletter"],
+      "settings": {
+        "show_locale_selector": true,
+        "show_currency_selector": true,
+        "show_payment_icons": true
+      }
+    }
+  },
+  "order": ["footer"]
+}

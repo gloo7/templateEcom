@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "cart_ajax_enable": true,
+        "show_note": true
+      }
+    },
+    "featured-collection-row": {
+      "type": "featured-collection-row",
+      "settings": {
+        "section_style": "contrast",
+        "enable_animation": true,
+        "collection": "",
+        "columns": 4,
+        "columns_mobile": "1",
+        "aspect_ratio": "natural",
+        "text_position": "left",
+        "overline": "Collection",
+        "title": "Shop bestsellers",
+        "subheading": "",
+        "link_text": "Shop now",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": ["main", "featured-collection-row"]
+}

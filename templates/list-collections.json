@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "enable_animation": true,
+        "display_type": "all",
+        "columns": 3,
+        "aspect_ratio": "portrait",
+        "collection_title_alignment": "center",
+        "show_product_count": false
+      }
+    }
+  },
+  "order": ["main"]
+}

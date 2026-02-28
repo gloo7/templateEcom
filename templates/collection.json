@@ -1,0 +1,153 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "enable_animation": true,
+        "show_breadcrumbs": false,
+        "show_collection_image": false,
+        "focal_point": "image_presentation",
+        "overlay_opacity": 20,
+        "overlay_color": "#000000",
+        "color_overlay_gradient": "",
+        "text_color": "#ffffff",
+        "show_border": true,
+        "show_heading": true,
+        "show_small_heading": false,
+        "show_description": true,
+        "heading_alignment": "center",
+        "text_max_width": 38
+      }
+    },
+    "main-collection-product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "enable_animation": true,
+        "show_sort": true,
+        "show_filters": true,
+        "show_filter_swatches": true,
+        "show_filter_chips": true,
+        "filter_style": "sidebar",
+        "collapse_filter_groups": false,
+        "show_swatches": true,
+        "products_per_row": 3,
+        "products_per_row_mobile": 1,
+        "aspect_ratio": "natural",
+        "text_alignment": "left",
+        "per_page": 12,
+        "pagination": "paginated"
+      }
+    },
+    "gallery": {
+      "type": "gallery",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "description": "",
+            "link": ""
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "description": "",
+            "link": ""
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "description": "",
+            "link": ""
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "description": "",
+            "link": ""
+          }
+        },
+        "image-5": {
+          "type": "image",
+          "settings": {
+            "description": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["image-1", "image-2", "image-3", "image-4", "image-5"],
+      "settings": {
+        "section_style": "default",
+        "enable_animation": true,
+        "columns": 3,
+        "aspect_ratio": "portrait",
+        "text_position": "top_center",
+        "overline": "The New Collection",
+        "title": "Spring Summer 2025",
+        "subheading": "",
+        "link": "",
+        "link_text": "View collection",
+        "text_max_width": 41
+      }
+    },
+    "text-columns-with-images": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image_max_width": 50,
+            "title": "Fast shipping",
+            "subheading": "<p>All orders are processed within 24 hours and shipped the next business day, so you don't have to wait to get ready.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "image_max_width": 50,
+            "title": "Hassle-free returns",
+            "subheading": "<p>If you're not happy with your purchase you'll have 30 days to return or exchange it. No questions asked.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "image_max_width": 50,
+            "title": "Sustainably sourced",
+            "subheading": "<p>Our choices can make huge impact. That's why we prioritize ethical  practices as much as possible.</p>",
+            "text_max_width": 36,
+            "link": "",
+            "link_text": "Read more"
+          }
+        }
+      },
+      "block_order": ["column-1", "column-2", "column-3"],
+      "settings": {
+        "section_style": "contrast",
+        "enable_animation": true,
+        "columns": 3,
+        "overline": "",
+        "title": "",
+        "subheading": "",
+        "link": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "text_max_width": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main-collection-product-grid",
+    "gallery",
+    "text-columns-with-images"
+  ]
+}

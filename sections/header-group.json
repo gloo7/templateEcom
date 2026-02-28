@@ -1,0 +1,64 @@
+{
+  "type": "header",
+  "name": "t:groups.header_group.name",
+  "sections": {
+    "utility-bar": {
+      "type": "utility-bar",
+      "blocks": {
+        "announcement-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Our Spring Summer collection is now available in stores and online",
+            "link": ""
+          }
+        },
+        "announcement-1": {
+          "type": "announcement",
+          "settings": {
+            "text": "Seasonal designs, sustainably made",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["announcement-0", "announcement-1"],
+      "settings": {
+        "show_utility_bar": true,
+        "show_social_icons": true,
+        "show_locale_selector": false,
+        "show_currency_selector": true,
+        "utility_bar_animation_timing": 5
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_nav": {
+          "type": "mega_nav",
+          "settings": {
+            "dropdown_parent_link": "",
+            "featured_image_heading": "",
+            "featured_image_link_text": "",
+            "featured_image_link": "",
+            "feature_text": ""
+          }
+        }
+      },
+      "block_order": ["mega_nav"],
+      "settings": {
+        "header_style": "default",
+        "nav_position": "inline_left",
+        "dropdown_interaction": "mouseover",
+        "show_cart_icon": true,
+        "show_search": true,
+        "show_search_mobile_icon": true,
+        "logo_max_size": 120,
+        "menu": "main-menu",
+        "transparent_index_header_enabled": true,
+        "transparent_header_foreground_color": "#ffffff",
+        "transparent_header_border_color": "#ffffff",
+        "transparent_header_border_opacity": 30
+      }
+    }
+  },
+  "order": ["utility-bar", "header"]
+}
