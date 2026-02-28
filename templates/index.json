@@ -590,6 +590,27 @@
         "show_view_all": true,
         "view_all_text": "一覧を見る"
       }
+    },
+    "collection_preview_bydVqn": {
+      "type": "collection-preview",
+      "name": "JP Collection Preview",
+      "settings": {
+        "heading": "热销",
+        "collection": "热销",
+        "products_to_show": 9,
+        "columns_desktop": 3,
+        "show_price": true,
+        "enable_hover_image": true,
+        "show_new_badge": true,
+        "new_days": 14,
+        "new_badge_text": "NEW",
+        "enable_wishlist": true,
+        "show_swatches": true,
+        "swatch_limit": 4,
+        "color_map": "灰色:#B9B9B9\n藍色:#2F5D9E\n黑色:#111111\n白色:#F4F4F4\n粉色:#E8A7B6\n米色:#D8C7A5",
+        "show_view_all": true,
+        "view_all_text": "一覧を見る"
+      }
     }
   },
   "order": [
@@ -607,6 +628,7 @@
     "video-hero",
     "blog-posts",
     "gallery-2",
-    "collection_preview_j3xHHq"
+    "collection_preview_j3xHHq",
+    "collection_preview_bydVqn"
   ]
 }
